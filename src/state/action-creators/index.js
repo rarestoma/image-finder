@@ -22,6 +22,8 @@ export const updateUserSurname = (userSurname) => {
 export const searchImage = (searchTerm) => {
     return async (dispatch) => {
 
+        const unsplashAPIKey = process.env.REACT_APP_UNSPLASH_API_KEY;
+
         dispatch({
             type: ActionType.SEARCH_START
         });
@@ -32,7 +34,7 @@ export const searchImage = (searchTerm) => {
                     query: searchTerm,
                   },
                 headers: {
-                    Authorization: `Client-ID {API_KEY_HERE}`,
+                    Authorization: `Client-ID ${unsplashAPIKey}`,
                   },
               });
     
