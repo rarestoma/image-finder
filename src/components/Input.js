@@ -1,4 +1,4 @@
-const Input = ({ inputLabel, inputId, inputType, inputValue, inputPlaceholder, onChange }) => {
+const Input = ({ inputLabel, inputId, inputType, inputValue, inputPlaceholder, inputAutofocus = false, onChange }) => {
     
     return (
         <div>
@@ -13,10 +13,12 @@ const Input = ({ inputLabel, inputId, inputType, inputValue, inputPlaceholder, o
                 type={inputType} 
                 value={inputValue}
                 placeholder={inputPlaceholder}
+                autoFocus={inputAutofocus}
                 onChange={onChange}
             />
         </div>
     )
+
 };
 
 export default Input;
