@@ -78,6 +78,7 @@ const UserForm = () => {
                     inputType="text"
                     inputPlaceholder="Enter name"
                     inputValue={userName}
+                    inputAutofocus={true}
                     onChange={handleUserNameChange}
                 />
 
